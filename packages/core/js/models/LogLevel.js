@@ -15,19 +15,29 @@ governing permissions and limitations under the License.
 
 'use strict';
 
-class AEPExtensionEvent {
-  eventName:   string;
-  eventType:   string;
-  eventSource: string;
-  eventData:   {[string]: any};
+const ERROR = "AEP_LOG_LEVEL_ERROR";
+const WARNING = "AEP_LOG_LEVEL_WARNING";
+const DEBUG = "AEP_LOG_LEVEL_DEBUG";
+const VERBOSE = "AEP_LOG_LEVEL_VERBOSE";
 
-  constructor(eventName: string, eventType: string, eventSource: string, eventData: {[string]: any}) {
-    this.eventName = eventName;
-    this.eventType = eventType;
-    this.eventSource = eventSource;
-    this.eventData = eventData;
+class LogLevel {
+
+  static get ERROR() {
+    return ERROR;
+  }
+
+  static get WARNING() {
+    return WARNING;
+  }
+
+  static get DEBUG() {
+    return DEBUG;
+  }
+
+  static get VERBOSE() {
+    return VERBOSE;
   }
 
 }
 
-module.exports = AEPExtensionEvent;
+module.exports = LogLevel;

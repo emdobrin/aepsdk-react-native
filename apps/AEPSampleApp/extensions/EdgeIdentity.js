@@ -15,7 +15,7 @@ governing permissions and limitations under the License.
 
 import React, {Component} from 'react';
 import {Button, StyleSheet, Text, View, ScrollView} from 'react-native';
-import {AEPIdentity, AEPIdentityItem, AEPIdentityMap, AEPAuthenticatedState} from '@adobe/react-native-aepedgeidentity';
+import {Identity, IdentityItem, IdentityMap, AuthenticatedState} from '@adobe/react-native-aepedgeidentity';
 
 export default EdgeIdentity = ({ navigation }) => {
 
@@ -33,15 +33,15 @@ export default EdgeIdentity = ({ navigation }) => {
 }
 
 function edgeIdentityExtensionVersion() {
-  AEPIdentity.extensionVersion().then(version => console.log("AdobeExperienceSDK: AEPEdgeIdentity version: " + version));
+  Identity.extensionVersion().then(version => console.log("AdobeExperienceSDK: AEPEdgeIdentity version: " + version));
 }
 
 function getExperienceCloudId() {
-  AEPIdentity.getExperienceCloudId().then(experienceCloudId => console.log("AdobeExperienceSDK: Experience Cloud Id = " + experienceCloudId));
+  Identity.getExperienceCloudId().then(experienceCloudId => console.log("AdobeExperienceSDK: Experience Cloud Id = " + experienceCloudId));
 }
 
 function getIdentities() {
-  AEPIdentity.getIdentities().then(identities => console.log("AdobeExperienceSDK: Get AEPIdentity Maps = " + JSON.stringify(identities)));
+  Identity.getIdentities().then(identities => console.log("AdobeExperienceSDK: Get AEPIdentity Maps = " + JSON.stringify(identities)));
 }
 
 //TO DO: Add updateIdentities() and removeIdentities() cases

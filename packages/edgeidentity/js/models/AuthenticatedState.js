@@ -15,29 +15,24 @@ governing permissions and limitations under the License.
 
 'use strict';
 
-const ERROR = "AEP_LOG_LEVEL_ERROR";
-const WARNING = "AEP_LOG_LEVEL_WARNING";
-const DEBUG = "AEP_LOG_LEVEL_DEBUG";
-const VERBOSE = "AEP_LOG_LEVEL_VERBOSE";
+const AUTHENTICATED = "AUTHENTICATED";
+const LOGGED_OUT = "LOGGED_OUT";
+const AMBIGUOUS = "AMBIGUOUS";
 
-class AEPMobileLogLevel {
+class AuthenticatedState {
 
-  static get ERROR() {
-    return ERROR;
+  static get AUTHENTICATED() {
+    return AUTHENTICATED;
   }
 
-  static get WARNING() {
-    return WARNING;
+  static get LOGGED_OUT() {
+    return LOGGED_OUT;
   }
 
-  static get DEBUG() {
-    return DEBUG;
-  }
-
-  static get VERBOSE() {
-    return VERBOSE;
+  static get AMBIGUOUS() {
+    return AMBIGUOUS;
   }
 
 }
 
-module.exports = AEPMobileLogLevel;
+module.exports = AuthenticatedState;

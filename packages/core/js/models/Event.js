@@ -15,24 +15,19 @@ governing permissions and limitations under the License.
 
 'use strict';
 
-const AUTHENTICATED = "AUTHENTICATED";
-const LOGGED_OUT = "LOGGED_OUT";
-const AMBIGUOUS = "AMBIGUOUS";
+class Event {
+  eventName:   string;
+  eventType:   string;
+  eventSource: string;
+  eventData:   {[string]: any};
 
-class AEPAuthenticatedState {
-
-  static get AUTHENTICATED() {
-    return AUTHENTICATED;
-  }
-
-  static get LOGGED_OUT() {
-    return LOGGED_OUT;
-  }
-
-  static get AMBIGUOUS() {
-    return AMBIGUOUS;
+  constructor(eventName: string, eventType: string, eventSource: string, eventData: {[string]: any}) {
+    this.eventName = eventName;
+    this.eventType = eventType;
+    this.eventSource = eventSource;
+    this.eventData = eventData;
   }
 
 }
 
-module.exports = AEPAuthenticatedState;
+module.exports = Event;

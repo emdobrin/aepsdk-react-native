@@ -16,8 +16,8 @@ governing permissions and limitations under the License.
 'use strict';
 
 const RCTAEPEdgeIdentity = require('react-native').NativeModules.AEPEdgeIdentity;
-import type {AEPIdentityMap} from './models/AEPIdentityMap';
-import type {AEPIdentityItem} from './models/AEPIdentityItem';
+import type {IdentityMap} from './models/IdentityMap';
+import type {IdentityItem} from './models/IdentityItem';
 
 module.exports = {
   /**
@@ -59,7 +59,7 @@ module.exports = {
    *
    * 
    */
-   updateIdentities(identityMap: AEPIdentityMap) {
+   updateIdentities(identityMap: IdentityMap) {
     RCTAEPEdgeIdentity.updateIdentities(identityMap);
   },
 
@@ -71,7 +71,7 @@ module.exports = {
    *  - item: The AEPIdentity to remove.
    *  - withNamespace: The namespace of the AEPIdentity to remove.
    */
-   removeIdentity(item: AEPIdentityItem, namespace: string) {
+   removeIdentity(item: IdentityItem, namespace: string) {
     RCTAEPEdgeIdentity.removeIdentity(item, namespace);
   },
 

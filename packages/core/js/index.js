@@ -20,8 +20,8 @@ module.exports = {
   get AEPMobilePrivacyStatus() {
     return require('./models/AEPMobilePrivacyStatus');
   },
-  get AEPMobileLogLevel() {
-    return require('./models/AEPMobileLogLevel');
+  get LogLevel() {
+    return require('./models/LogLevel');
   },
   get AEPMobileVisitorAuthenticationState() {
     return require('./models/AEPMobileVisitorAuthenticationState');
@@ -29,13 +29,13 @@ module.exports = {
   get AEPVisitorID() {
     return require('./models/AEPVisitorID');
   },
-  get AEPExtensionEvent() {
-    return require('./models/AEPExtensionEvent');
+  get Event() {
+    return require('./models/Event');
   },
 
   // Native modules
-  get AEPCore() {
-    return require('./AEPCore');
+  get MobileCore() {
+    return require('./MobileCore');
   },
   get AEPLifecycle() {
     return require('./AEPLifecycle');

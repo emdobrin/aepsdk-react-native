@@ -15,9 +15,9 @@ governing permissions and limitations under the License.
 
 'use strict';
 
-import AEPIdentityItem from './AEPIdentityItem';
+import IdentityItem from './IdentityItem';
 
-class AEPIdentityMap {
+class IdentityMap {
   items: {string: Array<AEPIdentityItem>} = {};
   namespace:string;
 
